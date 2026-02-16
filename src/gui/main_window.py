@@ -8,25 +8,48 @@ from src.services.candle_service import CandleService
 class MainWindow(toga.Box):
     def __init__(self):
         super().__init__(style=Pack(direction=COLUMN, text_align=CENTER, flex=1))
-        label = toga.Label("Welcome to Toga again",
-                           style=Pack(align_items=CENTER, flex=0.1))
-        image = toga.Image(IMAGES_PATH / "reversial" / "hammer.jpg")
-        rimage = toga.Image(IMAGES_PATH / "reversial" / "hammer_example.jpg")
-        image_view = toga.ImageView(image)
-        rimage_view = toga.ImageView(rimage)
+        label = toga.Label(
+            "Welcome to Toga again", style=Pack(align_items=CENTER, flex=0.1)
+        )
+        # image = toga.Image(IMAGES_PATH / "reversial" / "hammer.jpg")
+        # rimage = toga.Image(IMAGES_PATH / "reversial" / "hammer_example.jpg")
+        # image_view = toga.ImageView(image)
+        # rimage_view = toga.ImageView(rimage)
         self.add(label)
-        self.add(image_view)
-        self.add(rimage_view)
+        # self.add(image_view)
+        # self.add(rimage_view)
         service = CandleService()
         candles = service.get_bullish_candles()
         labels = []
         for candle in candles:
-            labels.append(toga.Label(candle['name_ar']))
+            labels.append(toga.Label(candle["name_ar"]))
 
-        print(labels)
-        box = toga.Box(direction=COLUMN)
+        # print(labels)
+        table = toga.DetailedList(
+            accessors=("picture", "name", "quote"),
+            data=[
+                {
+                    "picture": toga.Icon(IMAGES_PATH / "reversial" / "hammer"),
+                    "name": "Arthur Dent",
+                    "quote": "Where's the tea?",
+                },
+                {
+                    "picture": toga.Icon(IMAGES_PATH / "reversial" / "hammer.jpg"),
+                    "name": "Ford Prefect",
+                    "quote": "Do you know where my towel is?",
+                },
+                {
+                    "picture": toga.Icon(IMAGES_PATH / "reversial" / "hammer.png"),
+                    "name": "Tricia McMillan",
+                    "quote": "What planet are you from?",
+                },
+            ],
+        )
 
-        for label in labels:
-            box.add(label)
+        self.add(table)
+        # box = toga.Box(direction=COLUMN)
 
-        self.add(box)
+        # for label in labels:
+        #     box.add(label)
+
+        # self.add(box)

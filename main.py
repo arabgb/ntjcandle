@@ -6,7 +6,7 @@ from src.db.init import init_db
 
 class ImgOrg(toga.App):
     def startup(self):
-        init_db()
+        # init_db()
         self.main_window = toga.MainWindow(title=self.formal_name)
         self.main_window.content = MainWindow()
         self.main_window.size = (500, 300)
