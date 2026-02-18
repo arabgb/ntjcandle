@@ -19,32 +19,21 @@ class MainWindow(toga.Box):
         # self.add(image_view)
         # self.add(rimage_view)
         service = CandleService()
-        candles = service.get_bullish_candles()
+        candles = service.get_all_candles()
         labels = []
+        data = []
         for candle in candles:
             labels.append(toga.Label(candle["name_ar"]))
+            data.append(
+                {
+                    "icon": toga.Icon(IMAGES_PATH / candle["image_candle_path"]),
+                    "title": candle["name_ar"] + "-" + candle["name_en"],
+                    "subtitle": candle["description"],
+                }
+            )
 
         # print(labels)
-        table = toga.DetailedList(
-            accessors=("picture", "name", "quote"),
-            data=[
-                {
-                    "picture": toga.Icon(IMAGES_PATH / "reversial" / "hammer"),
-                    "name": "Arthur Dent",
-                    "quote": "Where's the tea?",
-                },
-                {
-                    "picture": toga.Icon(IMAGES_PATH / "reversial" / "hammer.jpg"),
-                    "name": "Ford Prefect",
-                    "quote": "Do you know where my towel is?",
-                },
-                {
-                    "picture": toga.Icon(IMAGES_PATH / "reversial" / "hammer.png"),
-                    "name": "Tricia McMillan",
-                    "quote": "What planet are you from?",
-                },
-            ],
-        )
+        table = toga.DetailedList(data=data, style=Pack(flex=1))
 
         self.add(table)
         # box = toga.Box(direction=COLUMN)

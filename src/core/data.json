@@ -7,8 +7,7 @@
 		"trend": "Bullish",
 		"description": "شمعة انعكاسية صعودية تظهر في نهاية الاتجاه الهابط، تشير إلى تغير محتمل في الاتجاه",
 		"rules": "1. تكون في نهاية اتجاه هابط\n2. جسم حقيقي صغير في الأعلى\n3. ظل سفلي طويل (2-3 أضعاف الجسم على الأقل)\n4. ظل علوي قصير أو معدوم\n5. اللون ليس مهماً لكن الأبيض أفضل",
-		"image_candle_path": "Reversal/Hammer.png",
-		"image_example_path": "Reversal/Examples/Hammer_Example.png",
+		"image_candle_path": "hammer",
 		"url": "thepatternsite.com"
 	},
 	{
@@ -19,8 +18,7 @@
 		"trend": "Bullish",
 		"description": "شمعة انعكاسية صعودية تظهر بعد اتجاه هابط، تشير إلى ضغط شراء محتمل",
 		"rules": "1. تكون في نهاية اتجاه هابط\n2. جسم حقيقي صغير في الأسفل\n3. ظل علوي طويل جداً\n4. ظل سفلي قصير أو معدوم\n5. الأفضل أن تكون بيضاء ولكن اللون ليس حاسماً",
-		"image_candle_path": "Reversal/Inverted_Hammer.png",
-		"image_example_path": "Reversal/Examples/Inverted_Hammer_Example.png"
+		"image_candle_path": "hammerInv"
 	},
 	{
 		"id": 3,
@@ -30,8 +28,7 @@
 		"trend": "Bearish",
 		"description": "شمعة انعكاسية هابطة تظهر في نهاية الاتجاه الصاعد، تشير إلى ضغط بيع",
 		"rules": "1. تكون في نهاية اتجاه صاعد\n2. جسم حقيقي صغير في الأسفل\n3. ظل علوي طويل جداً\n4. ظل سفلي قصير أو معدوم\n5. الفجوة بين الشمعة السابقة مهمة\n6. الأفضل أن تكون سوداء",
-		"image_candle_path": "Reversal/Shooting_Star.png",
-		"image_example_path": "Reversal/Examples/Shooting_Star_Example.png"
+		"image_candle_path": "ShootingStar1"
 	},
 	{
 		"id": 4,
@@ -41,8 +38,7 @@
 		"trend": "Bearish",
 		"description": "شمعة انعكاسية هابطة تظهر في قمة الاتجاه الصاعد، تشير إلى ضعف المشترين",
 		"rules": "1. تكون في نهاية اتجاه صاعد\n2. جسم حقيقي صغير في الأعلى\n3. ظل سفلي طويل جداً\n4. ظل علوي قصير أو معدوم\n5. يجب أن يكون هناك فجوة مع الشمعة السابقة\n6. التصديق بالشمعة التالية مهم",
-		"image_candle_path": "Reversal/Hanging_Man.png",
-		"image_example_path": "Reversal/Examples/Hanging_Man_Example.png"
+		"image_candle_path": "HangingMan"
 	},
 	{
 		"id": 5,
